@@ -30,6 +30,11 @@ body {
       margin-bottom: 8px;
   }
   
+  a {
+      color: inherit;
+      text-decoration: none;
+  }
+  
   .full-width {
       width: 100%;
   }
@@ -42,7 +47,7 @@ body {
       align-items: center;
       display: flex;
       justify-content: center;
-      min-height: 100vh;
+      min-height: 80vh;
       width: 100%;
   }
   
@@ -57,3 +62,38 @@ body {
       max-width: 700px;
   }
   
+  .nav-heading {
+      font-size: 48px;
+      text-align: center;
+  }
+  
+  .nav-items-container {
+      display: flex;
+      align-items: center;
+  }
+  
+  .nav-item {
+      display: inline-block;
+      flex: 1;
+      margin: 0px 4px;
+  }
+  
+  .products-list-item {
+      border-radius: 8px;
+      background: #EEE;
+      display: flex;
+      margin: 8px 0;
+      padding: 8px;
+  }
+  
+  .image-wrap {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      height: 100px;
+  }
+  
+  .product-details-wrap {
+      flex: 8;
+      padding: 0 8px;
+  }
