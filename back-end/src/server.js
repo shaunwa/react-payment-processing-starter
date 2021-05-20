@@ -11,7 +11,7 @@ const start = async () => {
     app.use(express.json());
 
     admin.initializeApp({
-        projectId: 'react-payment-processing',
+        projectId: 'react-pp-may-2021',
         credential: admin.credential.cert(FIREBASE_CREDENTIALS),
     });
 

@@ -7,7 +7,12 @@ import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 
 var firebaseConfig = {
-    // SETUP: The configuration from your firebase project will go here
+    apiKey: "AIzaSyB4TTpMc4CLYfJDa_TNHCrzHL7aJokjVlc",
+    authDomain: "react-pp-may-2021.firebaseapp.com",
+    projectId: "react-pp-may-2021",
+    storageBucket: "react-pp-may-2021.appspot.com",
+    messagingSenderId: "1052901296831",
+    appId: "1:1052901296831:web:36757d50353ba76bd9540a"
 };
 
 firebase.initializeApp(firebaseConfig);

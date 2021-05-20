@@ -2,7 +2,7 @@ import { Link, useHistory } from 'react-router-dom';
 import firebase from 'firebase/app';
 import { useAuth } from './util/useAuth';
 
-export const NavBar = () => {
+export const NavBar = ({ onCheckout, numberOfItems }) => {
     const { user } = useAuth();
     const history = useHistory();
 
@@ -16,11 +16,20 @@ export const NavBar = () => {
             <Link to="/">
                 <h1 className="nav-heading">Widgets R Us</h1>
             </Link>
-            {user && (
-                <div className="nav-items-container">
+            <div className="nav-items-container">
+                {user ? (
+                    <>
                     <button className="nav-item" onClick={signOut}>Log Out ({user.email})</button>
-                </div>
-            )}
+                    <button className="nav-item" onClick={onCheckout}>Checkout ({numberOfItems} items)</button>
+                    </>
+                ) : (
+                    <Link to="/login" className="nav-item">
+                        <button>
+                            Log In
+                        </button>
+                    </Link>
+                )}
+            </div>
         </nav>
     );
 }
